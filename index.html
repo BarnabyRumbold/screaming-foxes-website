@@ -3,99 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Screaming Foxes | Solitude</title>
+
 <style>
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('Switzer-Regular.woff2') format('woff2');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: Georgia, serif;
-    color: #F5F0E8;
-}
-.hero {
-    min-height: 100vh;
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.35),
-            rgba(0,0,0,0.35)
-        ),
-        url('background-mobile.jpg');
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
+body {
+    background-color: #F5F1EA;
+    color: #3B3B3B;
+    font-family: 'Switzer', sans-serif;
+
+    min-height: 100vh;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-.content {
-    max-width: 90%;
-}
-.content h1 {
-    font-size: 5rem;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-.content h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 8px;
-    margin-bottom: 30px;
-}
-.content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-.button {
-    display: inline-block;
-    border: 1px solid #F5F0E8;
-    padding: 12px 28px;
-    text-decoration: none;
-    color: #F5F0E8;
-}
-.button:hover {
-    background: #F5F0E8;
-    color: #000;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        background:
-            linear-gradient(
-                rgba(0,0,0,0.35),
-                rgba(0,0,0,0.35)
-            ),
-            url('background-mobile.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    .content h1 {
-        font-size: 2.5rem;
-    }
-    .content h2 {
-        font-size: 1rem;
-        letter-spacing: 4px;
-    }
-    .content p {
-        font-size: 1rem;
-    }
+.container {
+    width: 100%;
+    max-width: 1000px;
+
+    text-align: center;
+
+    padding: 60px 20px;
 }
-</style>
-</head>
-<body>
-<section class="hero">
-    <div class="content">
-        <h1>SCREAMING FOXES</h1>
-        <h2>SOLITUDE</h2>
-        <p>Debut album coming 2027</p>
-        <a href="#" class="button">Listen</a>
-    </div>
-</section>
-</body>
-</html>
+
+.site-title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+
+    margin-bottom: 50px;
+
+    color: #3B3B3B;
+}
+
+.album-frame {
+    max-width: 700px;
+
+    margin: 0 auto 50px auto;
+
+    background: #F5F1EA;
+
+    padding: 40px;
+
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,0.05),
+        0 10px 30px rgba(0,0,0,0.08);
+}
+
+.album-frame img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #3B3B3B;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 1px;
+
+    transition
