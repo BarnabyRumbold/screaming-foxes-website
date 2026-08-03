@@ -25,18 +25,16 @@ body {
     background-color: #F5F1EA;
     color: #3B3B3B;
     font-family: 'Switzer', sans-serif;
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 
 .container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
+
+    margin: 120px auto 60px auto;
+
     text-align: center;
-    padding: 60px 20px;
 }
 
 .site-title {
@@ -48,14 +46,8 @@ body {
 }
 
 .album-frame {
-    max-width: 700px;
-    margin: 0 auto 50px auto;
-    padding: 40px;
-    background: #F5F1EA;
-
-    box-shadow:
-        0 0 0 1px rgba(0,0,0,0.05),
-        0 10px 30px rgba(0,0,0,0.08);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .album-frame img {
@@ -66,11 +58,13 @@ body {
 }
 
 .nav {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 35px;
-    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .nav a {
@@ -98,10 +92,16 @@ body {
 @media (max-width: 768px) {
 
     .site-title {
-        font-size: 1.8rem;
-        letter-spacing: 3px;
-        margin-bottom: 30px;
-    }
+    position: absolute;
+    top: 40px;
+    left: 60px;
+
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    color: #3B3B3B;
+}
 
     .album-frame {
         padding: 20px;
@@ -109,8 +109,22 @@ body {
     }
 
     .nav {
-        gap: 20px;
-    }
+    position: absolute;
+    top: 45px;
+    right: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+    body {
+    background-color: #F5F1EA;
+    color: #3B3B3B;
+    font-family: 'Switzer', sans-serif;
+
+    position: relative;
+}
+
 
 }
 
@@ -127,10 +141,10 @@ body {
         <img src="background (2).jpg">
 
     <nav class="nav">
-        #Home</a>
-        #Music</a>
+        Home</a>
+        Music</a>
         <aontact</a>
-        #Sign Up</a>
+        Sign Up</a>
 
         <a href="https://instagram.com/screamingfoxesmusic"
            target="_blank"
