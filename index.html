@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Switzer';
-    src: url('Switzer-Regular.woff2') format('opentype');
+    src: url('Switzer-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,6 @@ body {
     background-color: #F5F1EA;
     color: #3B3B3B;
     font-family: 'Switzer', sans-serif;
-
     min-height: 100vh;
 
     display: flex;
@@ -36,30 +35,23 @@ body {
 .container {
     width: 100%;
     max-width: 1000px;
-
     text-align: center;
-
     padding: 60px 20px;
 }
 
 .site-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    letter-spacing: 6px;
-
+    letter-spacing: 5px;
     margin-bottom: 50px;
-
     color: #3B3B3B;
 }
 
 .album-frame {
     max-width: 700px;
-
     margin: 0 auto 50px auto;
-
-    background: #F5F1EA;
-
     padding: 40px;
+    background: #F5F1EA;
 
     box-shadow:
         0 0 0 1px rgba(0,0,0,0.05),
@@ -68,30 +60,83 @@ body {
 
 .album-frame img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-
     display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 35px;
-
     flex-wrap: wrap;
 }
 
 .nav a {
     color: #3B3B3B;
-
     text-decoration: none;
-
     font-size: 0.95rem;
-
     letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
 
-    transition
+.nav a:hover {
+    opacity: 0.6;
+}
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+}
+
+.instagram-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .site-title {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+
+    .album-frame {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="site-title">SCREAMING FOXES</h1>
+
+    <div class="album-frame">
+        <img src="background/div>
+
+    <nav class="nav">
+        #Home</a>
+        #Music</a>
+        <aontact</a>
+        #Sign Up</a>
+
+        <a href="https://instagram.com/screamingfoxesmusic"
+           target="_blank"
+           class="instagram-link"
+           aria-label="Instagram">
+
+            <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm8.94 1.13a1.06 1.06 0 1 1 0 2.12 1.06 1.06 0 0 1 0-2.12zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5z"/>
+            </
