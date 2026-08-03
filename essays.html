@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Essays | Screaming Foxes</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
 @font-face {
     font-family: 'Switzer';
@@ -13,6 +14,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     background: #F5F1EA;
@@ -93,7 +97,7 @@ header {
     opacity: 0.25;
 }
 
-/* ESSAYS / BLOG LAYOUT */
+/* ESSAYS — SINGLE SCROLLING PAGE */
 .essays-wrap {
     width: 88%;
     max-width: 800px;
@@ -106,12 +110,17 @@ header {
     text-transform: uppercase;
     margin-bottom: 50px;
 }
-.essay-entry {
-    padding-bottom: 40px;
-    margin-bottom: 40px;
+
+/* Index of excerpts at the top, each linking down the page */
+.essay-index {
+    margin-bottom: 80px;
+}
+.essay-index-entry {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     border-bottom: 1px solid rgba(59,59,59,0.15);
 }
-.essay-entry:last-child {
+.essay-index-entry:last-child {
     border-bottom: none;
 }
 .essay-date {
@@ -122,19 +131,19 @@ header {
     margin-bottom: 10px;
     display: block;
 }
-.essay-entry h2 {
+.essay-index-entry h2 {
     font-size: 1.15rem;
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 14px;
 }
-.essay-entry p {
+.essay-index-entry p {
     font-size: 0.95rem;
     line-height: 1.8;
     opacity: 0.85;
     margin-bottom: 14px;
 }
-.essay-entry a.read-more {
+a.read-more {
     font-size: 0.75rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -143,8 +152,39 @@ header {
     border-bottom: 1px solid #3B3B3B;
     padding-bottom: 2px;
 }
-.essay-entry a.read-more:hover {
+a.read-more:hover {
     opacity: 0.6;
+}
+
+/* Full essay body sections further down the page */
+.essay-full {
+    scroll-margin-top: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid rgba(59,59,59,0.15);
+}
+.essay-full h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.essay-full p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+a.back-to-top {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #3B3B3B;
+    text-decoration: none;
+    opacity: 0.6;
+}
+a.back-to-top:hover {
+    opacity: 1;
 }
 
 /* MOBILE */
@@ -181,7 +221,7 @@ header {
 </style>
 </head>
 <body>
-<header>
+<header id="top">
     <a href="index.html" class="site-title">SCREAMING FOXES</a>
     <nav class="nav">
         <div class="nav-links">
@@ -204,8 +244,7 @@ header {
             </a>
             <a href="#" class="icon-link" aria-label="Apple Music">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.997 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.311-1.062-2.31-2.18-3.043A5.022 5.022 0 0 0 19.9.412a13.427 13.427 0 0 0-1.877-.372A18.435 18.435 0 0 0 15.415 0h-6.83c-.446 0-.89.022-1.331.06a12.99 12.99 0 0 0-2.462.395 5.036 5.036 0 0 0-2.762 1.755A5.323 5.323 0 0 0 .95 3.895 8.66 8.66 0 0 0 .1 6.124c-.06.448-.088.899-.09 1.35C0 7.68 0 7.891 0 8.099v7.803c0 .209 0 .418.01.627.002.451.03.902.09 1.349a8.66 8.66 0 0 0 .85 2.23 5.323 5.323 0 0 0 1.08 1.685 5.036 5.036 0 0 0 2.762 1.755c.808.19 1.63.32 2.462.395.441.038.885.06 1.33.06h6.831c.447 0 .89-.022 1.332-.06.83-.075 1.653-.204 2.461-.395a5.022 5.022 0 0 0 1.677-.479 5.19 5.19 0 0 0 2.18-3.042c.129-.712.212-1.435.24-2.19.01-.209.007-.418.01-.627V7.475c-.003-.209 0-.418-.01-.627z"/>
-                    <path d="M15.194 3.44c-.005.037-.01.074-.017.111l-4.923 1.03c-.264.057-.463.29-.463.567v9.062c-.373-.107-.803-.13-1.238-.045-1.096.216-1.9 1.08-1.795 1.933.104.852.98 1.397 2.077 1.18 1.02-.2 1.79-.955 1.788-1.746V8.09l4.14-.868v6.238c-.373-.107-.802-.13-1.237-.044-1.096.215-1.9 1.079-1.796 1.932.105.853.98 1.398 2.077 1.181 1.03-.202 1.803-.972 1.788-1.772V4.058c0-.36-.322-.633-.68-.575l-.66.117z"/>
+                    <path d="M23.994 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.311-1.062-2.31-2.18-3.043a5.022 5.022 0 0 0-1.677-.48 13.427 13.427 0 0 0-1.877-.372A18.435 18.435 0 0 0 15.415 0H8.585c-.446 0-.89.022-1.331.06-.83.075-1.653.204-2.462.395a5.036 5.036 0 0 0-2.762 1.755A5.323 5.323 0 0 0 .95 3.895 8.66 8.66 0 0 0 .1 6.124C.04 6.572.012 7.023.01 7.474 0 7.68 0 7.891 0 8.099v7.803c0 .209 0 .418.01.627.002.451.03.902.09 1.349a8.66 8.66 0 0 0 .85 2.23 5.323 5.323 0 0 0 1.08 1.685 5.036 5.036 0 0 0 2.762 1.755c.808.19 1.63.32 2.462.395.441.038.885.06 1.33.06h6.831c.447 0 .89-.022 1.332-.06.83-.075 1.653-.204 2.461-.395a5.022 5.022 0 0 0 1.677-.48 5.19 5.19 0 0 0 2.18-3.042c.129-.712.212-1.435.24-2.19.01-.209.007-.418.01-.627V7.475c-.003-.209 0-.418-.01-.627zM15.5 15.4a2.09 2.09 0 0 1-1.677 2.045c-.994.234-1.86-.393-2.043-1.336a1.756 1.756 0 0 1 1.407-2.08l3.313-.774V6.474L9.5 8.09v8.222a2.09 2.09 0 0 1-1.677 2.045c-.994.234-1.86-.393-2.043-1.336a1.756 1.756 0 0 1 1.407-2.08l1.313-.28V6.72c0-.5.336-.916.816-1.03l6.68-1.472c.66-.15 1.29.354 1.29 1.03v9.14z"/>
                 </svg>
             </a>
         </div>
@@ -215,19 +254,40 @@ header {
 <div class="essays-wrap">
     <h1>Essays</h1>
 
-    <!-- Duplicate this .essay-entry block for each new post -->
-    <div class="essay-entry">
-        <span class="essay-date">01 / 2026</span>
-        <h2>Essay title goes here</h2>
-        <p>Write a short excerpt or opening paragraph of the essay here — a few sentences on the process, the thinking, or the story behind a track or the record.</p>
-        <a href="#" class="read-more">Read more</a>
+    <!-- INDEX: short excerpts. Each "Read more" jumps down to the matching
+         full essay further down this same page (id="essay-1", "essay-2" etc). -->
+    <div class="essay-index">
+        <div class="essay-index-entry">
+            <span class="essay-date">01 / 2026</span>
+            <h2>Essay title goes here</h2>
+            <p>Write a short excerpt or opening paragraph here — a couple of sentences on the process, the thinking, or the story behind a track or the record.</p>
+            <a href="#essay-1" class="read-more">Read more</a>
+        </div>
+
+        <div class="essay-index-entry">
+            <span class="essay-date">02 / 2026</span>
+            <h2>Another essay title</h2>
+            <p>Another short excerpt goes here. Replace with real content as you write new process essays.</p>
+            <a href="#essay-2" class="read-more">Read more</a>
+        </div>
     </div>
 
-    <div class="essay-entry">
+    <!-- FULL ESSAYS: the complete text sits further down the same page.
+         Duplicate one of these blocks (and its matching index entry above)
+         for every new essay you add. -->
+    <div class="essay-full" id="essay-1">
+        <span class="essay-date">01 / 2026</span>
+        <h2>Essay title goes here</h2>
+        <p>This is where the full essay text goes. Replace this with as many paragraphs as you like — write about the process behind a track, the story of the record, or anything else. There's no length limit here; the reader just scrolls down through it.</p>
+        <p>Keep adding paragraphs like this one for the rest of the piece.</p>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    <div class="essay-full" id="essay-2">
         <span class="essay-date">02 / 2026</span>
         <h2>Another essay title</h2>
-        <p>Another short excerpt goes here. Replace with real content as you write new process essays.</p>
-        <a href="#" class="read-more">Read more</a>
+        <p>This is where the second essay's full text goes. Replace with your own writing.</p>
+        <a href="#top" class="back-to-top">Back to top</a>
     </div>
 
 </div>
