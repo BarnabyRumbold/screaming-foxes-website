@@ -235,7 +235,28 @@ button[type="submit"]:hover {
          The very first submission will trigger a one-time confirmation email
          from FormSubmit to that inbox — click the link in it to activate the form. -->
     
-    <form://api.web3forms.com/submit
+    <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="936b48a3-51ad-44d9-9676-76b8d0f2f6a7">
+    <input type="hidden" name="subject" value="New message from Screaming Foxes website">
+    <input type="hidden" name="redirect" value="https://screamingfoxes.co.uk/contact-success.html">
+
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+    </div>
+
+    <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" required></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+</form>
 
     <input type="hidden" name="access_key" value="936b48a3-51ad-44d9-9676-76b8d0f2f6a7">
     <input type="hidden" name="subject" value="New message from Screaming Foxes website">
