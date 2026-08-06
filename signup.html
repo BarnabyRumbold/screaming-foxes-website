@@ -229,20 +229,22 @@ button[type="submit"]:hover {
     <!-- Sends directly to screamingfoxesmusic@gmail.com via FormSubmit.
          The first submission triggers a one-time confirmation email to
          that inbox — click the link in it to activate the form. -->
-    <form action="https://formsubmit.co/screamingfoxesmusic@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New mailing list sign-up — Screaming Foxes website">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="signup.html">
-
-        <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="Name" required>
-        </div>
-
-        <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-        </div>
+        <form
+            action="https://buttondown.com/api/emails/embed-subscribe/screamingfoxes"
+            method="post">
+        
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="metadata[name]">
+            </div>
+        
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        
+            <button type="submit">Sign Up</button>
+        </form>
 
         <button type="submit">Sign Up</button>
     </form>
